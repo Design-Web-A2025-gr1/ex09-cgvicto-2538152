@@ -3,6 +3,11 @@
     src: url('https://use.typekit.net/af/94379b/0000000000000000774b907c/30/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3');
 }
 
+@font-face {
+    font-family: "RobotoFont";
+    src: url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+}
+
 :root {
     --couleur-texte: #2a292b;
     --color-bg: #f9f4ed;
@@ -12,10 +17,126 @@
     --espacement: 0.75rem
 }
 
+.gras {
+    font-weight: bold;
+}
+
+a:visited {
+    color: var(--couleur-texte);
+}
+
 * {
     box-sizing: border-box;
+    font-family: "RobotoFont", sans-serif;
 }
 
 body {
     margin: var(--espacement);
 }
+/* J'aurais peu utiliser des classe et des id, mais pour la visualisation je le voyais mieux comme ça */
+/* - - - - - header - - - - - */
+header {
+    display: flex;
+    height: var(--hauteur-entete);
+    background-color: var(--color-bg);
+    border-radius: var(--border-radius);
+    align-items: center;
+    justify-content: space-between;
+    padding: 2rem;
+}
+
+/* - - - - - images ( left ) - - - - - */
+header img {
+    height: 50px
+}
+
+/* - - - - - navigation ( center ) - - - - - */
+header nav {
+    display: flex;
+    gap: var(--espacement);
+}
+
+header nav ul li {
+    list-style: none;
+}
+
+header nav ul li a {
+    text-decoration: none;
+}
+
+/* - - - - - div ( right ) - - - - - */
+header div {
+    display: flex;
+    gap: var(--espacement);
+    
+}
+
+
+/* - - - - - main - - - - - */
+main {
+    margin-top: var(--espacement);
+    display: flex;
+    height: 80vh;
+    gap: var(--espacement);
+}
+
+/* - - - - - background video - - - - - */
+#background-video {
+    width: 35vw;
+    border-radius: var(--border-radius);
+    overflow: hidden; 
+}
+
+#background-video video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* - - - - - article - - - - - */
+main article {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--color-bg);
+    border-radius: var(--border-radius);
+    padding: var(--espacement);
+}
+
+main article h1 {
+    font-family: ObviouslyVariable, sans-serif;
+    font-size: 6rem;
+    text-align: center;
+    margin: 0;
+}
+
+main article p {
+    text-align: center;
+    font-style: oblique;
+}
+
+main article svg {
+    text-align: center;
+    font-size: 1.25rem;
+}
+
+main article button {
+    background-color: var(--color-bouton);
+    color: white;
+    border: none;
+    border-radius: 10px;
+    height:30px;
+    margin-top: var(--espacement);
+    cursor:grab;
+}
+
+main article button:hover {
+    background-color: #ff7f00;
+}
+
+main article button:active {
+    background-color: var(--color-bouton);
+}
+
