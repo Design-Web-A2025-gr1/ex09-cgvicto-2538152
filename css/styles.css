@@ -55,6 +55,10 @@ header nav {
     display: flex;
     gap: var(--espacement);
 }
+header nav ul {
+    display: flex;
+    gap: var(--espacement);
+}
 
 header nav ul li {
     list-style: none;
